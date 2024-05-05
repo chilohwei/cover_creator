@@ -2,7 +2,10 @@ import streamlit as st
 from cover_generator import create_cover, load_gradient
 import io
 import os
+import streamlit as st
 
+# 设置页面配置
+st.set_page_config(page_title="封面制作工具", page_icon=":sparkles:", layout="centered", initial_sidebar_state="auto")
 
 def main():
     page = st.sidebar.radio("菜单", ["封面制作工具", "关于作者：Chiloh"])
@@ -86,9 +89,9 @@ def save_image(img, platform, size):
 
 def about_author():
     st.title("关于作者")
-    st.write("Chiloh 是一位热情的软件开发者，专注于图形设计和用户体验。")
-    st.write("查看项目源代码：[GitHub](https://github.com/chilohwei/cover_creator)")
-    st.image("https://chilohdata.s3.bitiful.net/qrcode.jpg", caption="联系方式二维码")  # 假设您已经有一个二维码图像
+    st.write("Chiloh 是一位软件产品经理，日常生活工作在西安。喜欢开源，也很喜欢折腾，对东西方哲学、人工智能、区块链等都比较感兴趣。")
+    st.write("本项目由 ChatGPT 与我结对编程实现，查看项目源代码：[GitHub](https://github.com/chilohwei/cover_creator)")
+    st.image("https://chilohdata.s3.bitiful.net/qrcode.jpg", caption="公众号：魏奇洛")
 
 
 if __name__ == "__main__":
