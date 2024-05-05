@@ -7,10 +7,10 @@ WORKDIR /app
 # 安装系统依赖（并说明每个依赖的作用）
 RUN apt-get update && apt-get install -y --no-install-recommends \
     build-essential \
-    libjpeg-dev \ # 用于处理JPEG图像的开发库
-    zlib1g-dev \ # 用于处理ZIP文件的开发库
-    libffi-dev \ # 用于动态链接的开发库
-    cmake \ # 用于构建软件的跨平台构建工具
+    libjpeg-dev \
+    zlib1g-dev \
+    libffi-dev \
+    cmake \
     && rm -rf /var/lib/apt/lists/*
 
 # 更新 pip 到最新版
