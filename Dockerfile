@@ -6,17 +6,17 @@ WORKDIR /app
 
 # 安装系统依赖（并说明每个依赖的作用）
 RUN apt-get update && apt-get install -y --no-install-recommends \
-    build-essential # 用于编译二进制软件包
-    libjpeg-dev # 用于处理JPEG图像的开发库
-    zlib1g-dev # 用于处理ZIP文件的开发库
-    libffi-dev # 用于动态链接的开发库
-    cmake # 用于构建软件的跨平台构建工具
+    build-essential \
+    libjpeg-dev \ # 用于处理JPEG图像的开发库
+    zlib1g-dev \ # 用于处理ZIP文件的开发库
+    libffi-dev \ # 用于动态链接的开发库
+    cmake \ # 用于构建软件的跨平台构建工具
     && rm -rf /var/lib/apt/lists/*
 
 # 更新 pip 到最新版
 RUN pip install --upgrade pip
 
-# 分段复制文件: 先复制 requirements.txt
+# 分段复制文件：先复制 requirements.txt
 COPY requirements.txt /app/
 
 # 使用升级后的pip安装依赖，锁定依赖版本
