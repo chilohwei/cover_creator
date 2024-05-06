@@ -29,6 +29,7 @@
 - Pillow
 
 ### 安装指南
+#### 本地部署
 1. 克隆本仓库到本地：
 ```bash
    git clone https://github.com/chilohwei/cover_creator.git
@@ -40,12 +41,18 @@
    pip install -r requirements.txt
 ```
 
-### 运行应用
-在项目根目录下，执行以下命令启动应用：
+3. 在项目根目录下，执行以下命令启动应用：
 ```bash
   streamlit run app.py
 ```
 然后在浏览器中访问展示的URL即可开始使用封面制作工具。
+
+#### Docker部署
+执行下方命令，然后打开`http://localhost:8501`访问使用。
+
+```bash
+docker run -d -p 8501:8501 chiloh/cover_creator:latest
+```
 
 ## 关于作者
 Chiloh，一位热爱探索图形设计与用户体验的软件开发者。更多项目和信息，请访问我的[GitHub](https://github.com/chilohwei)。

@@ -29,23 +29,30 @@ Ensure the following dependencies are installed:
 - Pillow
 
 ### Installation Guide
-1. Clone this repository to your local machine:
+#### Local Deployment
+1. Clone this repository locally:
 ```bash
-   git clone https://github.com/chilohwei/cover_creator.git
+    git clone https://github.com/chilohwei/cover_creator.git
 ```
 
 2. Enter the project directory and install dependencies:
 ```bash
-   cd cover_creator
-   pip install -r requirements.txt
+    cd cover_creator
+    pip install -r requirements.txt
 ```
 
-### Run the Application
-Execute the following command in the root directory of the project to start the application:
+3. In the project root directory, execute the following command to start the application:
 ```bash
-  streamlit run app.py
+   streamlit run app.py
 ```
-Then, visit the URL displayed in the browser to start using the cover creation tool.
+Then visit the displayed URL in your browser to start using the cover creation tool.
+
+#### Docker Deployment
+Execute the following command, and then open `http://localhost:8501` to access it.
+
+```bash
+docker run -d -p 8501:8501 chiloh/cover_creator:latest
+```
 
 ## About the Author
 Chiloh, a software developer who loves to explore graphic design and user experience. For more projects and information, please visit my [GitHub](https://github.com/chilohwei).
